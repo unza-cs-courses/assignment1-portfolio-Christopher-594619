@@ -3,105 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio website for [Your Name]">
-    <title>Portfolio - [Your Name]</title>
+    <meta name="description" content="Professional portfolio website for Christopher Kumwenda">
+    <title>Portfolio - Christopher Kumwenda</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!--
-    ============================================================
-    ASSIGNMENT 1: RESPONSIVE PORTFOLIO WEBSITE
-    CSC4035 Web Programming and Technologies
-
-    Instructions:
-    1. Complete all TODO sections below
-    2. Use semantic HTML5 elements
-    3. Ensure all images have alt attributes
-    4. Ensure all form inputs have labels
-    5. Test responsiveness at multiple breakpoints
-    ============================================================
-    -->
 
     <!-- Navigation -->
     <header class="header">
-        <nav class="nav">
-            <!-- TODO: Create navigation with links to each section
-                 Requirements:
-                 - Logo/site title
-                 - Navigation links (Home, About, Projects, Contact)
-                 - Mobile-friendly (hamburger menu optional)
-                 - Active state indication
-            -->
+        <nav class="nav" aria-label="Main navigation">
             <div class="nav__logo">
-                <a href="#home">[Your Name]</a>
+                <a href="#home" class="nav__logo-link">Christopher Kumwenda</a>
             </div>
-            <ul class="nav__menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+            <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item"><a href="#home" class="nav__link nav__link--active">Home</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Home/Hero Section -->
         <section id="home" class="hero">
-            <!-- TODO: Create hero section
-                 Requirements:
-                 - Your name (h1)
-                 - Professional tagline
-                 - Call-to-action button
-                 - Consider using Flexbox for layout
-            -->
-            <div class="hero__content">
-                <h1>Your Name</h1>
-                <p class="hero__tagline">
-                    <!-- TODO: Add your professional tagline -->
-                    Web Developer | Designer | Problem Solver
-                </p>
-                <a href="#contact" class="btn btn--primary">Get In Touch</a>
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Hi, I'm <span class="hero__highlight">Christopher Kumwenda</span></h1>
+                    <p class="hero__tagline">Full-Stack Web Developer | UI/UX Designer | Problem Solver</p>
+                    <p class="hero__description">I build accessible, pixel-perfect, and performant web experiences that help businesses grow and users succeed.</p>
+                    <div class="hero__cta">
+                        <a href="#projects" class="btn btn--primary">View My Work</a>
+                        <a href="#contact" class="btn btn--secondary">Get In Touch</a>
+                    </div>
+                    <div class="hero__social">
+                        <a href="https://github.com/Christopher-594619" aria-label="GitHub Profile" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://linkedin.com/in/christopher-kumwenda-216467293" aria-label="LinkedIn Profile" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="images/hero-image.jpg" alt="Christopher Kumwenda - Web Developer" class="hero__img" width="400" height="400" loading="lazy">
+                </div>
             </div>
+            <a href="#about" class="hero__scroll" aria-label="Scroll to about section"><span class="hero__scroll-icon">↓</span></a>
         </section>
 
         <!-- About Section -->
         <section id="about" class="about">
-            <!-- TODO: Create about section
-                 Requirements:
-                 - Section heading (h2)
-                 - Profile image with alt text
-                 - Professional bio (150+ words)
-                 - Skills list
-                 - Use CSS Grid or Flexbox for layout
-            -->
             <div class="container">
-                <h2>About Me</h2>
+                <h2 class="section__title">About Me</h2>
                 <div class="about__content">
                     <div class="about__image">
-                        <!-- TODO: Add your profile image -->
-                        <img src="images/profile-placeholder.jpg" alt="Profile photo of [Your Name]">
+                        <img src="images/profile.png" alt="Profile photo of Christopher Kumwenda, a web developer with 4 years experience" class="about__img" width= "400" height= "400" loading="lazy">
                     </div>
                     <div class="about__text">
-                        <p>
-                            <!-- TODO: Write your professional bio (150+ words)
-                                 Include:
-                                 - Your background
-                                 - Your interests in web development
-                                 - Your goals
-                                 - What makes you unique
-                            -->
-                            [Your professional bio goes here. Write at least 150 words about yourself,
-                            your background, your passion for web development, and your goals.
-                            This is your opportunity to introduce yourself to potential employers or clients.]
-                        </p>
-                        <h3>Skills</h3>
+                        <p class="about__bio">Hello! I'm <strong>Christopher Kumwenda</strong>, a passionate Full-Stack Web Developer based in Lusaka. With over 4 years of experience building digital products, I specialize in creating responsive, accessible, and user-centered web applications using modern technologies like React, Node.js, and TypeScript.</p>
+                        <p class="about__bio">My journey into web development started when I built my first website for a local nonprofit. That experience ignited my passion for using technology to solve real-world problems and create meaningful user experiences. I thrive on turning complex challenges into elegant, intuitive solutions.</p>
+                        <p class="about__bio">When I'm not coding, you'll find me contributing to open-source projects, writing technical blog posts, or exploring the outdoors. I'm currently seeking opportunities to join a collaborative team where I can grow my skills while delivering impactful products that users love.</p>
+                        <h3 class="about__skills-title">Technical Skills</h3>
                         <ul class="skills-list">
-                            <!-- TODO: Add your skills -->
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>JavaScript</li>
-                            <li>Responsive Design</li>
-                            <!-- Add more skills -->
+                            <li class="skill-item">HTML5 & Semantic Markup</li>
+                            <li class="skill-item">CSS3 / Sass / Tailwind</li>
+                            <li class="skill-item">JavaScript (ES6+) / TypeScript</java with stringboot/python with Djangoli>
+                            <li class="skill-item">React / Next.js</li>
+                            <li class="skill-item">Node.js / Express</li>
+                            <li class="skill-item">Git / GitHub / CI/CD</li>
+                            <li class="skill-item">Responsive & Mobile-First Design</li>
+                            <li class="skill-item">Web Accessibility (WCAG)</li>
                         </ul>
                     </div>
                 </div>
@@ -110,152 +85,144 @@
 
         <!-- Projects Section -->
         <section id="projects" class="projects">
-            <!-- TODO: Create projects section
-                 Requirements:
-                 - Section heading (h2)
-                 - Minimum 3 project cards
-                 - Each card: image, title, description, link(s)
-                 - Use CSS Grid for card layout
-            -->
             <div class="container">
-                <h2>My Projects</h2>
+                <h2 class="section__title">My Projects</h2>
+                <p class="section__subtitle">A selection of my recent work</p>
                 <div class="projects__grid">
-                    <!-- Project Card 1 -->
                     <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project1-placeholder.jpg" alt="Screenshot of Project 1">
+                        <img src="images/project1.jpg" alt="Airline Reservation System" class="project-card__img" width="600" height="400" loading="lazy">
                         <div class="project-card__content">
-                            <h3>Project Title 1</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
+                            <h3 class="project-card__title">Airline Reservation System</h3>
+                            <p class="project-card__description">A full-featured Mobile online booking and ticketing system for booking flights Scheduling flights using java,with springboot framework,mySQL and FlightAPI.</p>
+                            <ul class="project-card__tech">
+                                <li class="tech-tag">HTML5</li>
+                                <li class="tech-tag">CSS3</li>
+                                <li class="tech-tag">JavaScript</li>
+                            </ul>
                             <div class="project-card__links">
                                 <a href="#" class="btn btn--small">Live Demo</a>
                                 <a href="#" class="btn btn--small btn--outline">GitHub</a>
                             </div>
                         </div>
                     </article>
-
-                    <!-- Project Card 2 -->
                     <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project2-placeholder.jpg" alt="Screenshot of Project 2">
+                        <img src="images/project2.jpg" alt="Point Of Sale System" class="project-card__img" width="600" height="400" loading="lazy">
                         <div class="project-card__content">
-                            <h3>Project Title 2</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
+                            <h3 class="project-card__title">Point Of Sale</h3>
+                            <p class="project-card__description">A comprehensive solution for processing secure sales transactions,managing inventory levels, and generating real-time business reports.</p>
+                            <ul class="project-card__tech">
+                                <li class="tech-tag">JavaScript</li>
+                                <li class="tech-tag">CSS Grid</li>
+                                <li class="tech-tag">LocalStorage</li>
+                            </ul>
                             <div class="project-card__links">
                                 <a href="#" class="btn btn--small">Live Demo</a>
                                 <a href="#" class="btn btn--small btn--outline">GitHub</a>
                             </div>
                         </div>
                     </article>
-
-                    <!-- Project Card 3 -->
                     <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project3-placeholder.jpg" alt="Screenshot of Project 3">
+                        <img src="images/project3.jpg" alt="Weather Dashboard - Real-time forecast with interactive maps" class="project-card__img" width="600" height="400" loading="lazy">
                         <div class="project-card__content">
-                            <h3>Project Title 3</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
+                            <h3 class="project-card__title">Weather Dashboard</h3>
+                            <p class="project-card__description">A beautiful weather app with real-time data, 5-day forecasts, and interactive maps using OpenWeather API.</p>
+                            <ul class="project-card__tech">
+                                <li class="tech-tag">API Integration</li>
+                                <li class="tech-tag">JavaScript</li>
+                                <li class="tech-tag">CSS3</li>
+                            </ul>
                             <div class="project-card__links">
                                 <a href="#" class="btn btn--small">Live Demo</a>
                                 <a href="#" class="btn btn--small btn--outline">GitHub</a>
                             </div>
                         </div>
                     </article>
-
-                    <!-- TODO: Add more project cards if desired -->
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="contact">
-            <!-- TODO: Create contact section
-                 Requirements:
-                 - Section heading (h2)
-                 - Contact form with:
-                   - Name field (required)
-                   - Email field (required, type="email")
-                   - Message textarea (required)
-                   - Submit button
-                 - All inputs must have associated labels
-                 - Use HTML5 validation attributes
-            -->
             <div class="container">
-                <h2>Contact Me</h2>
+                <h2 class="section__title">Get In Touch</h2>
+                <p class="section__subtitle">Have a project in mind? I'd love to hear from you!</p>
                 <form class="contact__form" action="#" method="POST">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            placeholder="Your Name"
-                            minlength="2"
-                        >
+                        <label for="name">Name <span class="form-required" aria-label="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name" minlength="2" maxlength="50" autocomplete="name" class="form-input">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            placeholder="your.email@example.com"
-                        >
+                        <label for="email">Email <span class="form-required" aria-label="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com" autocomplete="email" class="form-input">
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            placeholder="What is this regarding?"
-                        >
+                        <input type="text" id="subject" name="subject" placeholder="What is this regarding?" maxlength="100" class="form-input">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            required
-                            rows="5"
-                            placeholder="Your message..."
-                            minlength="10"
-                        ></textarea>
+                        <label for="message">Message <span class="form-required" aria-label="required">*</span></label>
+                        <textarea id="message" name="message" required rows="6" placeholder="Your message..." minlength="10" maxlength="1000" class="form-textarea"></textarea>
                     </div>
-                    <button type="submit" class="btn btn--primary">Send Message</button>
+                    <button type="submit" class="btn btn--primary btn--block">Send Message</button>
                 </form>
+                <div class="contact__alternatives">
+                    <p>Or reach out directly:</p>
+                    <ul class="contact__methods">
+                        <li><a href="mailto:christopher.kumwenda@cs.unza.zm" class="contact-link">📧 christopher.kumwenda@cs.unza.zm</a></li>
+                        <li><a href="https://github.com/Christopher-594619" class="contact-link" target="_blank" rel="noopener">🐙 GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/christopher-kumwenda-216467293" class="contact-link" target="_blank" rel="noopener">💼 LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <!-- TODO: Create footer
-             Requirements:
-             - Copyright notice
-             - Social media links (optional)
-             - Back to top link (optional)
-        -->
         <div class="container">
-            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-            <nav class="footer__social">
-                <!-- TODO: Add your social media links -->
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                <a href="#" aria-label="Twitter">Twitter</a>
+            <p class="footer__copyright">&copy; <span id="current-year">2026</span> <a href="#home" class="footer__name">Christopher Kumwenda</a>. All rights reserved.</p>
+            <nav class="footer__social" aria-label="Social media links">
+                <a href="https://github.com/Christopher-594619" aria-label="Visit my GitHub profile" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+                    <span class="visually-hidden">GitHub:</span>
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/christopher-kumwenda-216467293" aria-label="Visit my LinkedIn profile" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+                    <span class="visually-hidden">LinkedIn:</span>
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="mailto:christopher.kumenda@cs.unza.zm" aria-label="Send me an email" class="footer__social-link">
+                    <span class="visually-hidden">Email:</span>
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                </a>
             </nav>
+            <a href="#home" class="footer__back-to-top" aria-label="Back to top of page" id="backToTop"><span class="back-to-top__icon">↑</span><span class="back-to-top__text">Back to Top</span></a>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        const navToggle = document.querySelector('.nav__toggle');
+        const navMenu = document.querySelector('.nav__menu');
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', navToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+        });
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTopBtn.classList.toggle('visible', window.scrollY > 400);
+        });
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
